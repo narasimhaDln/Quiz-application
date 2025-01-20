@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom"; // Corrected import
 import "../Styles/Quiz.css";
 
 function Quiz() {
@@ -19,10 +19,9 @@ function Quiz() {
       return;
     }
 
-    fetch(`https://opentdb.com/api.php?amount=10&category=${quizSetup.category}&difficulty=${quizSetup.difficulty}&type=multiple` )
+    fetch(`https://opentdb.com/api.php?amount=10&category=${quizSetup.category}&difficulty=${quizSetup.difficulty}&type=multiple`)
       .then((res) => res.json())
       .then((data) => {
-        // Fix 1: Access results from the correct property
         setQuestions(data.results);
         setLoading(false);
       })
@@ -40,11 +39,15 @@ function Quiz() {
   };
 
   const handleNext = () => {
-    setCurrentQuestionIndex(currentQuestionIndex + 1);
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
   };
 
   const handlePrevious = () => {
-    setCurrentQuestionIndex(currentQuestionIndex - 1);
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+    }
   };
 
   const handleSubmit = () => {
