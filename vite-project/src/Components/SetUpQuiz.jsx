@@ -42,6 +42,7 @@ function SetUpQuiz() {
   };
 
   return (
+  
     <div className={`setup-quiz ${loading ? "loading" : ""}`}>
       <h2>Setup Your Quiz</h2>
 
@@ -101,6 +102,6 @@ function SetUpQuiz() {
       {loading && <div className="loading-message">Loading categories...</div>}
     </div>
   );
-}
+  }
 
 export default SetUpQuiz;

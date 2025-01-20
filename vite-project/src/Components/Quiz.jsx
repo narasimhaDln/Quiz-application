@@ -19,9 +19,7 @@ function Quiz() {
       return;
     }
 
-    fetch(
-      `https://opentdb.com/api.php?amount=10&category=${quizSetup.category}&difficulty=${quizSetup.difficulty}&type=multiple`
-    )
+    fetch(`https://opentdb.com/api.php?amount=10&category=${quizSetup.category}&difficulty=${quizSetup.difficulty}&type=multiple` )
       .then((res) => res.json())
       .then((data) => {
         // Fix 1: Access results from the correct property
