@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom"; // Corrected import
-import "../Styles/Leaderboard.css";
+import { useLocation } from "react-router-dom"; 
+import "../Styles/LeaderBoard.css"
 
 function LeaderBoard() {
   const [leaderBoard, setLeaderBoard] = useState([]);

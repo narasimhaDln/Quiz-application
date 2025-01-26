@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom"; // Corrected import
-import "../Styles/Quiz.css";
+import { useLocation, useNavigate } from "react-router-dom"; 
+
+import "../Styles/Quiz.css"
 
 function Quiz() {
   const [questions, setQuestions] = useState([]);

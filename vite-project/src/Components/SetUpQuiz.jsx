@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Corrected import
-import "../Styles/SetupQuiz.css";
+import { useNavigate } from "react-router-dom"; 
+import "../Styles/SetUpQuiz.css";
 
 function SetUpQuiz() {
   const [name, setName] = useState("");
